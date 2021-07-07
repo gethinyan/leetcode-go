@@ -18,10 +18,10 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 		}
 		if nums1[startNums1] < nums2[startNums2] {
 			numsAll = append(numsAll, nums1[startNums1])
-			startNums1 += 1
+			++startNums1
 		} else {
 			numsAll = append(numsAll, nums2[startNums2])
-			startNums2 += 1
+			++startNums2
 		}
 	}
 	lenNumsAll := len(numsAll)

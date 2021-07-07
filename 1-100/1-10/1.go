@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func twoSum(nums []int, target int) []int {
 	numsMap := make(map[int]int)
