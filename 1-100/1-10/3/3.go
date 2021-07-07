@@ -1,8 +1,14 @@
+// 3. 无重复字符的最长子串（https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/）
 package main
 
 import (
 	"fmt"
 )
+
+func main() {
+	str := "abcabcbb"
+	fmt.Println(lengthOfLongestSubstring(str))
+}
 
 func lengthOfLongestSubstring(s string) int {
 	start := 0
@@ -19,9 +25,4 @@ func lengthOfLongestSubstring(s string) int {
 	}
 
 	return maxLength
-}
-
-func main() {
-	str := "abcabcbb"
-	fmt.Println(lengthOfLongestSubstring(str))
 }

@@ -1,3 +1,4 @@
+// 2. 两数相加（https://leetcode-cn.com/problems/add-two-numbers/）
 package main
 
 import (
@@ -8,6 +9,30 @@ import (
 type ListNode struct {
 	Val  int
 	Next *ListNode
+}
+
+func main() {
+	l1 := &ListNode{
+		2,
+		&ListNode{
+			4,
+			&ListNode{
+				3,
+				nil,
+			},
+		},
+	}
+	l2 := &ListNode{
+		5,
+		&ListNode{
+			6,
+			&ListNode{
+				4,
+				nil,
+			},
+		},
+	}
+	fmt.Println(addTwoNumbers(l1, l2))
 }
 
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
@@ -38,28 +63,4 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	}
 
 	return L
-}
-
-func main() {
-	l1 := &ListNode{
-		2,
-		&ListNode{
-			4,
-			&ListNode{
-				3,
-				nil,
-			},
-		},
-	}
-	l2 := &ListNode{
-		5,
-		&ListNode{
-			6,
-			&ListNode{
-				4,
-				nil,
-			},
-		},
-	}
-	fmt.Println(addTwoNumbers(l1, l2))
 }
