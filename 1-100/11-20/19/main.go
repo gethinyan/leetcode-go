@@ -3,6 +3,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 )
 
 func main() {
@@ -30,6 +31,16 @@ func main() {
 type ListNode struct {
 	Val  int
 	Next *ListNode
+}
+
+func (node *ListNode) String() string {
+	var next string
+	if nil != node.Next {
+		next = node.Next.String()
+	} else {
+		next = "nil"
+	}
+	return "{Val:" + strconv.Itoa(node.Val) + " Next:" + next + "}"
 }
 
 func removeNthFromEnd(head *ListNode, n int) *ListNode {

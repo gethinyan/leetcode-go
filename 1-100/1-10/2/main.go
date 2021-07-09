@@ -3,13 +3,8 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 )
-
-// ListNode ...
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
 
 func main() {
 	l1 := &ListNode{
@@ -33,6 +28,22 @@ func main() {
 		},
 	}
 	fmt.Println(addTwoNumbers(l1, l2))
+}
+
+// ListNode ...
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
+
+func (node *ListNode) String() string {
+	var next string
+	if nil != node.Next {
+		next = node.Next.String()
+	} else {
+		next = "nil"
+	}
+	return "{Val:" + strconv.Itoa(node.Val) + " Next:" + next + "}"
 }
 
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
