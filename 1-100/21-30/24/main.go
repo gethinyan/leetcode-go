@@ -20,7 +20,7 @@ func main() {
 			},
 		},
 	}
-	fmt.Printf("%+v\n", swapPairs(head))
+	fmt.Println(swapPairs(head))
 }
 
 // ListNode ...
